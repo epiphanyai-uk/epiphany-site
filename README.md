@@ -1,3 +1,23 @@
+# epiphany-site
+
+Static website for marketing purposes
+
+🚀 Running the project locally
+
+This project uses pnpm as the package manager.
+
+Install pnpm
+
+`npm install -g pnpm`
+
+Install dependencies
+
+`pnpm install`
+
+Start development server
+
+`pnpm dev`
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
