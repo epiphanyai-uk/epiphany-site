@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import * as styles from '../Button.css'
 
 type ButtonProps = {
   to: string
-  children: React.ReactNode
+  children: ReactNode
   variant?: 'primary' | 'secondary'
 }
 

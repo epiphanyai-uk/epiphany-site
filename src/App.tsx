@@ -1,4 +1,4 @@
-import Home from './pages/Home'
+import AppRouter from './routes/AppRouter'
 
 export default function App() {
   return (
@@ -6,7 +6,7 @@ export default function App() {
      
 
       <main>
-        <Home />
+        <AppRouter/>
       </main>
     </div>
   )

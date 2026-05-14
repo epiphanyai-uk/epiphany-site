@@ -17,8 +17,8 @@ const Home = () => {
               Build personalised AI-powered learning journeys tailored to your style
             </p>
             <div>
-              <Button to={''} children={''} />
-
+              <Button to="/about">Learn More</Button>
+              <Button to="/contact">Get in Touch</Button>
             </div>
 
           </div>

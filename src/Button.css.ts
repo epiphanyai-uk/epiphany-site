@@ -1,31 +1,50 @@
 import { style, styleVariants } from '@vanilla-extract/css'
 
-export const container = style({
-  display: 'flex',
-  gap: '1rem',
-})
-
 const baseButton = style({
-  padding: '0.75rem 1.5rem',
-  borderRadius: '0.5rem',
-  fontWeight: 600,
-  textDecoration: 'none',
-  transition: '0.2s ease',
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
+
+  borderRadius: '0.5rem',
+
+  padding: '0.5rem 1rem',
+
+  fontSize: '0.875rem',
+  fontWeight: 500,
+
+  border: 'none',
+  cursor: 'pointer',
+
+  transition:
+    'background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease',
+
+  selectors: {
+    '&:focus': {
+      outline: 'none',
+    },
+
+    '&:focus-visible': {
+      boxShadow: '0 0 0 2px rgb(6 182 212 / 0.5)',
+    },
+
+    '&:disabled': {
+      opacity: 0.5,
+      pointerEvents: 'none',
+      cursor: 'not-allowed',
+    },
+  },
 })
 
 export const buttonVariants = styleVariants({
   primary: [
     baseButton,
     {
-      background: '#14b8a6',
-      color: 'white',
+      background: '#06b6d4',
+      color: '#000',
 
       selectors: {
         '&:hover': {
-          background: '#0d9488',
+          background: '#22d3ee',
         },
       },
     },
@@ -34,13 +53,13 @@ export const buttonVariants = styleVariants({
   secondary: [
     baseButton,
     {
-      border: '1px solid #14b8a6',
-      color: '#0f766e',
       background: 'transparent',
+      color: '#06b6d4',
+      border: '1px solid #06b6d4',
 
       selectors: {
         '&:hover': {
-          background: '#ccfbf1',
+          background: 'rgb(6 182 212 / 0.1)',
         },
       },
     },
