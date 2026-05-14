@@ -1,30 +1,25 @@
 import { style } from '@vanilla-extract/css';
 
+export const page = style({
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  padding: '2rem 1rem',
+})
 
-
-export const counter = style({
-  fontSize: 16,
-  padding: '5px 10px',
-  borderRadius: 5,
-  color: 'var(--accent)',
-  background: 'var(--accent-bg)',
-  border: '2px solid transparent',
-  transition: 'border-color 0.3s',
-  marginBottom: 24,
-
-  selectors: {
-    '&:hover': {
-      borderColor: 'var(--accent-border)',
-    },
-    '&:focus-visible': {
-      outline: '2px solid var(--accent)',
-      outlineOffset: '2px',
-    },
-  },
+export const container = style({
+  width: '100%',
+  maxWidth: '1100px',
+  display: 'grid',
+  gap: '3rem',
 })
 
 export const hero = style({
-  position: 'relative',
+  display: 'grid',
+  placeItems: 'center',
+  textAlign: 'center',
+  gap: '1.5rem',
 })
 
  export const base = style({
@@ -35,62 +30,10 @@ export const hero = style({
   zIndex: 0,
 })
 
- export const framework = style({
-  insetInline: 0,
-  margin: '0 auto',
-  position: 'absolute',
-  zIndex: 1,
-  top: 34,
-  height: 28,
-  transform:
-    'perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1.4)',
-})
-
-export const vite = style({
-  insetInline: 0,
-  margin: '0 auto',
-  position: 'absolute',
-  zIndex: 0,
-  top: 107,
-  height: 26,
-  width: 'auto',
-  transform:
-    'perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8)',
-})
-
-export const center = style({
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 25,
-  placeContent: 'center',
-  placeItems: 'center',
-  flexGrow: 1,
-
-  '@media': {
-    '(max-width: 1024px)': {
-      padding: '32px 20px 24px',
-      gap: 18,
-    },
-  },
-})
-
 export const nextSteps = style({
   display: 'flex',
   borderTop: '1px solid var(--border)',
   textAlign: 'left',
-
-  selectors: {
-    '& > div': {
-      flex: '1 1 0',
-      padding: 32,
-
-      '@media': {
-        '(max-width: 1024px)': {
-          padding: '24px 20px',
-        },
-      },
-    },
-  },
 
   '@media': {
     '(max-width: 1024px)': {
@@ -193,4 +136,8 @@ export const ticks = style({
       borderRightColor: 'var(--border)',
     },
   },
+})
+
+export const panel = style({
+  padding: '2rem',
 })

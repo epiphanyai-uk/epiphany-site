@@ -8,7 +8,7 @@ export const header = style({
   zIndex: 50,
 
   height: '4rem',
-
+  background: '#0f172a',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
