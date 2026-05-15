@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import * as styles from '../Header.css'
+import epiphanyImg from '../assets/epiphanyai-logo.png';
 
 export interface HeaderProps {
   isLeftSideBarOpen: boolean
@@ -86,6 +87,9 @@ const Header = ({
         </div>
 
         <div className={styles.navLinks}>
+          <Link to="/">
+          <img src={epiphanyImg} width={50} height={50} alt="Epiphany Logo" />
+          </Link>
           <Link to="/about">
             About
           </Link>
