@@ -1,26 +1,21 @@
 import { style } from '@vanilla-extract/css'
 
 export const footer = style({
-  marginTop: '1.5rem',
   padding: '2.5rem 1.5rem',
+  width:'100%',
   fontSize: '0.875rem',
-
   borderTop: '1px solid rgba(255,255,255,0.1)',
-
-  background: '#0f172a', // slate-900
-  color: '#cbd5e1', // slate-300
+  background: '#0f172a',
+  color: '#cbd5e1',
 })
 
 export const divider = style({
   height: '4px',
   width: '100%',
   marginBottom: '1.5rem',
-
   borderRadius: '9999px',
-
   background:
     'linear-gradient(to right, #2dd4bf, #38bdf8, #14b8a6)',
-
   opacity: 0.7,
 })
 

@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useState } from 'react'
+import * as styles from '../Layout.css'
 
 const Layout = () => {
   const [
@@ -10,7 +11,7 @@ const Layout = () => {
   ] = useState(false)
 
   return (
-    <>
+     <div className={styles.appShell}>
       <Header
         isLeftSideBarOpen={
           isLeftSideBarOpen
@@ -20,12 +21,12 @@ const Layout = () => {
         }
       />
 
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
 
       <Footer />
-    </>
+    </div>
   )
 }
 
