@@ -20,6 +20,7 @@ export const hero = style({
   placeItems: 'center',
   textAlign: 'center',
   gap: '1.5rem',
+  marginBlockStart: '6rem',
 })
 
 export const paragraph = style({
@@ -84,7 +85,6 @@ export const nextStepsList = style({
 
   '@media': {
     '(max-width: 1024px)': {
-      marginTop: 20,
       flexWrap: 'wrap',
       justifyContent: 'center',
     },

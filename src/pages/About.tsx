@@ -54,7 +54,7 @@ const About = () => {
           <li>⚽ <strong>GoalMind</strong> — Predictive AI analytics for football outcomes</li>
         </ul>
 
-        <p className="text-sm text-gray-500 mt-6">
+        <p>
           © {new Date().getFullYear()} Epiphany AI — Building the future of intelligent systems.
         </p>
       </div>

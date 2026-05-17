@@ -3,58 +3,51 @@ import { Link } from 'react-router-dom';
 import * as styles from '../Footer.css'
 
 const Footer = () => {
-
-
     return (
-
-
         <footer className={styles.footer}>
-            <div className={styles.footerContainer}>
-                {/* Gradient Divider */}
+
                 <div className={styles.divider}>
 
-                    {/* Main Grid */}
-                    <div className={styles.footerContent}>
+                    <div className={styles.grid}>
 
-                        <h3 className={styles.brandTitle}>
-                            Epiphany AI</h3>
-                        <p className={styles.paragraph}>
-                            Crafting intelligent systems and delightful user experiences
-                        </p>
+                        {/* BRAND */}
+                        <div>
+                            <h3 className={styles.brandTitle}>
+                                Epiphany AI
+                            </h3>
+                            <p className={styles.paragraph}>
+                                Crafting intelligent systems and delightful user experiences
+                            </p>
 
-                        <div className={styles.socialRow}>
+                            <div 
+                            className={styles.socialRow}
+                            >
+                                <a href="https://github.com/epiphanyai-uk" target="_blank">
+                                    <svg
+                                        className={styles.socialIcon}
+                                        role="presentation"
+                                        aria-hidden="true"
+                                    >
+                                        <use href="/icons.svg#github-icon"></use>
+                                    </svg>
+                                </a>
 
-                            <ul className={styles.list}>
-                                <li>
-                                    <p className={styles.paragraph}>Follow us here</p>
-                                    <a href="https://github.com/epiphanyai-uk" target="_blank">
-                                        <svg
-                                            className={styles.socialIcon}
-                                            role="presentation"
-                                            aria-hidden="true"
-                                        >
-                                            <use href="/icons.svg#github-icon"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/company/epiphanyartificialintelligence/" target="_blank">
-                                        <svg
-                                            className={styles.socialIcon}
-                                            role="presentation"
-                                            aria-hidden="true"
-                                        >
-                                            <use href="/icons.svg#discord-icon"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
+
+                                <a href="https://www.linkedin.com/company/epiphanyartificialintelligence/" target="_blank">
+                                    <svg
+                                        className={styles.socialIcon}
+                                        role="presentation"
+                                        aria-hidden="true"
+                                    >
+                                        <use href="/icons.svg#discord-icon"></use>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
 
+                        {/* COMPANY */}
                         <div>
-                            <h3 className={styles.sectionTitle}>
-                                Company
-                            </h3>
+                            <h3 className={styles.sectionTitle}>Company</h3>
 
                             <ul className={styles.list}>
                                 <li>
@@ -70,21 +63,12 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-
-                        {/* Divider */}
-                        <div className={styles.bottom}>
-
-                            <p>© {new Date().getFullYear()} Epiphany Labs. All rights reserved.</p>
-
-                        </div>
-
+                    </div>
+                     <div className={styles.bottom}>
+                        <p>© {new Date().getFullYear()} Epiphany Labs. All rights reserved.</p>
                     </div>
                 </div>
-            </div>
-
-
         </footer>
-
     );
 };
 

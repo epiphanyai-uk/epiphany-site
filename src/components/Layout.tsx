@@ -11,7 +11,9 @@ const Layout = () => {
   ] = useState(false)
 
   return (
-     <div className={styles.appShell}>
+   <div 
+  //  className={styles.appShell}
+   >
       <Header
         isLeftSideBarOpen={
           isLeftSideBarOpen
@@ -20,13 +22,11 @@ const Layout = () => {
           setIsLeftSideBarOpen
         }
       />
-
       <main className={styles.main}>
         <Outlet />
       </main>
-
       <Footer />
-    </div>
+      </div> 
   )
 }
 
