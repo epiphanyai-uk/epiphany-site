@@ -22,7 +22,18 @@ export const hero = style({
   gap: '1.5rem',
 })
 
- export const base = style({
+export const buttonContainer = style({
+  textDecoration: 'none',
+  cursor: 'pointer',
+
+  selectors: {
+    '&': {
+      textDecoration: 'none',
+    },
+  },
+})
+
+export const base = style({
   insetInline: 0,
   margin: '0 auto',
   width: 170,

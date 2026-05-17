@@ -1,33 +1,45 @@
 import { style } from '@vanilla-extract/css'
 
+/* FULL WIDTH FOOTER */
 export const footer = style({
-  padding: '2.5rem 1.5rem',
-  width:'100%',
-  fontSize: '0.875rem',
-  borderTop: '1px solid rgba(255,255,255,0.1)',
+  width: '100%',
   background: '#0f172a',
   color: '#cbd5e1',
+  borderTop: '1px solid rgba(255,255,255,0.08)',
+  padding: '3rem 1.5rem',
 })
 
+/* CENTERED CONTAINER */
+export const footerContainer = style({
+  width: '100%',
+  maxWidth: '1200px',
+  margin: '0 auto',
+})
+
+/* TOP DIVIDER */
 export const divider = style({
   height: '4px',
   width: '100%',
-  marginBottom: '1.5rem',
+  marginBottom: '2rem',
   borderRadius: '9999px',
   background:
     'linear-gradient(to right, #2dd4bf, #38bdf8, #14b8a6)',
   opacity: 0.7,
 })
 
-export const grid = style({
-  display: 'grid',
-  gridTemplateColumns: '1fr',
+/* FLEX CONTENT */
+export const footerContent = style({
+  display: 'flex',
+  flexDirection: 'column',
   gap: '2.5rem',
+  alignItems: 'center',
   textAlign: 'center',
 
   '@media': {
     '(min-width: 768px)': {
-      gridTemplateColumns: 'repeat(2, 1fr)',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
       textAlign: 'left',
     },
   },
@@ -45,12 +57,13 @@ export const paragraph = style({
   fontSize: '1rem',
   fontWeight: 400,
   marginBottom: '0.75rem',
-  color: '#D1D5DB',
+  color: '#cbd5e1'
 })
 
 export const socialRow = style({
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
   gap: '0.75rem',
   marginTop: '1rem',
 
@@ -62,8 +75,11 @@ export const socialRow = style({
 })
 
 export const socialIcon = style({
-  fontSize: '1.25rem',
+  width: "2rem",
+  height: "2rem",
+  fill: 'currentColor',
   color: '#cbd5e1',
+  flexShrink: 0,
   transition: 'color 0.2s ease',
 
   selectors: {
@@ -74,7 +90,7 @@ export const socialIcon = style({
 })
 
 export const sectionTitle = style({
-  fontSize: '1.125rem',
+  fontSize: '1rem',
   fontWeight: 600,
   marginBottom: '0.75rem',
   color: '#2dd4bf',
@@ -84,6 +100,7 @@ export const list = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.5rem',
+  listStyle: 'none',
 })
 
 export const link = style({
@@ -104,5 +121,5 @@ export const bottom = style({
   paddingTop: '1.5rem',
   fontSize: '0.75rem',
   textAlign: 'center',
-  opacity: 0.7,
+  color: '#94a3b8'
 })

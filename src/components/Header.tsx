@@ -1,4 +1,4 @@
-import type { Dispatch, SetStateAction } from 'react'
+import { useEffect, type Dispatch, type SetStateAction } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import * as styles from '../Header.css'
 import epiphanyImg from '../assets/epiphanyai-logo.png';
@@ -6,44 +6,67 @@ import epiphanyImg from '../assets/epiphanyai-logo.png';
 export interface HeaderProps {
   isLeftSideBarOpen: boolean
   setIsLeftSideBarOpen:
-    Dispatch<SetStateAction<boolean>>
+  Dispatch<SetStateAction<boolean>>
 }
 
 const Header = ({
   isLeftSideBarOpen,
   setIsLeftSideBarOpen,
 }: HeaderProps) => {
-  
 
   const location = useLocation()
 
-  const isHome =
-    location.pathname === '/' ||
-    location.pathname === '/home'
+useEffect(() => {
+  setIsLeftSideBarOpen(false)
+}, [location.pathname, setIsLeftSideBarOpen])
+
+
 
   return (
     <header
       className={styles.header}
     >
       <div className={styles.left}>
-        {isHome && (
-          <button
-            className={styles.menuButton}
-            onClick={() =>
-              setIsLeftSideBarOpen(
-                prev => !prev
-              )
-            }
-          >
-            <i
-              className={`fas ${
-                isLeftSideBarOpen
-                  ? 'fa-xmark'
-                  : 'fa-bars'
-              }`}
-            />
-          </button>
-        )}
+
+        <button
+          className={styles.menuButton}
+          onClick={() =>
+            setIsLeftSideBarOpen(
+              v => !v
+            )
+          }
+        >
+          {isLeftSideBarOpen ? (
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          ) : (
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          )}
+        </button>
 
         <div className={styles.logoWrapper}>
           <Link to="/">
@@ -86,18 +109,36 @@ const Header = ({
           </Link>
         </div>
 
-        <div className={styles.navLinks}>
+        {/* MOBILE NAV */}
+        {isLeftSideBarOpen && (
+          <nav className={styles.mobileNavOpen}>
+            <Link to="/">
+              <img src={epiphanyImg} width={50} height={50} alt="Epiphany Logo" />
+            </Link>
+            <Link className={styles.link} to="/about">
+              About
+            </Link>
+
+            <Link className={styles.link} to="/contact">
+              Contact
+            </Link>
+          </nav>
+        )}
+
+        {/* DESKTOP NAV */}
+        <nav className={styles.desktopNav}>
           <Link to="/">
-          <img src={epiphanyImg} width={50} height={50} alt="Epiphany Logo" />
+            <img src={epiphanyImg} width={50} height={50} alt="Epiphany Logo" />
           </Link>
-          <Link to="/about">
+          <Link className={styles.link} to="/about">
             About
           </Link>
 
-          <Link to="/contact">
+          <Link className={styles.link} to="/contact">
             Contact
           </Link>
-        </div>
+        </nav>
+
       </div>
     </header>
   )

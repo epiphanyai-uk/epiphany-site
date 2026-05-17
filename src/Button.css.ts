@@ -4,20 +4,17 @@ const baseButton = style({
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-
+  textDecoration: 'none',
   borderRadius: '0.5rem',
-
   padding: '0.5rem 1rem',
-
+  margin: '1rem',
   fontSize: '0.875rem',
   fontWeight: 500,
-
   border: 'none',
   cursor: 'pointer',
-
   transition:
     'background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease',
-
+    
   selectors: {
     '&:focus': {
       outline: 'none',

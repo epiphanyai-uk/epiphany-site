@@ -17,7 +17,7 @@ const Home = () => {
             <p>
               Build personalised AI-powered learning journeys tailored to your style
             </p>
-            <div>
+            <div className={styles.buttonContainer}>
               <Button to="/about">Learn More</Button>
               <Button to="/contact">Get in Touch</Button>
             </div>
