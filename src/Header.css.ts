@@ -6,7 +6,8 @@ export const header = style({
   left: 0,
   right: 0,
   height: '4rem',
-  background: '#0f172a',
+  
+    background: '#020617',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',

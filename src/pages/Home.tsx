@@ -13,7 +13,7 @@ const Home = () => {
           <section className={styles.hero}>
 
             <img src={epiphanyImg} width={100} height={100} alt="Epiphany Logo" />
-            <p>
+            <p className={styles.paragraph}>
               Build personalised AI-powered learning journeys tailored to your style
             </p>
             <div className={styles.buttonContainer}>
