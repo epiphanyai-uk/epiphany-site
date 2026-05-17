@@ -8,4 +8,5 @@ export const appShell = style({
 
 export const main = style({
   flex: 1,
+  paddingTop: '4rem',
 })
