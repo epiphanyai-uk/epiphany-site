@@ -24,38 +24,6 @@ const Home = () => {
           </section>
         </div>
       </div>
-
-      {/* SOCIAL LINKS */}
-
-      <div id="social">
-        <h2>Follow us here</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/epiphanyai-uk" target="_blank">
-              <svg
-                className="button-icon"
-                role="presentation"
-                aria-hidden="true"
-              >
-                <use href="/icons.svg#github-icon"></use>
-              </svg>
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/epiphanyartificialintelligence" target="_blank">
-              <svg
-                className="button-icon"
-                role="presentation"
-                aria-hidden="true"
-              >
-                <use href="/icons.svg#discord-icon"></use>
-              </svg>
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      </div>
     </>
   );
 };
