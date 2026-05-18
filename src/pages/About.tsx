@@ -1,62 +1,43 @@
-
+import * as styles from "../About.css"
+import epiphanyImg from '../assets/epiphanyai-logo.png';
 
 const About = () => {
 
   return (
     <div>
 
-    
-  
+      {/*  Main Content */}
+      <div
+        className={styles.page}
+      >
+        <div
+          className={styles.card}
+        >
+          <img className={styles.img} src={epiphanyImg} width={100} height={100} alt="Epiphany Logo" />
 
-      {/* 🧱 Main Content */}
-    <div
-      className=""
-    >
-        <h1 className="">
-          Epiphany AI
-        </h1>
+          <p className={styles.text}>
+            Epiphany AI is a next-generation AI workspace that brings together creative ideation,
+            technical automation, and data intelligence all in one place.
+            We’re building tools that empower developers, learners, and innovators
+            to turn ideas into fully realised systems with clarity, speed, and adaptability.
+          </p>
 
-        <p>
-          <strong>Epiphany AI</strong> is a next-generation AI workspace that brings together creative ideation,
-          technical automation, and data intelligence — all in one place.  
-          We’re building tools that empower developers, learners, and innovators
-          to turn ideas into fully realized systems with clarity, speed, and adaptability.
-        </p>
+          <p className={styles.text}>
+            At the heart of Epiphany AI lies a belief: <em>ideas deserve to grow</em>.
+            Whether you're exploring, experimenting, or scaling a vision,
+            we aim to provide the intelligence and infrastructure to get you there.
+          </p>
 
-        <p>
-          From intelligent app-building agents to adaptive learning platforms like <strong>Lucid Garden</strong>,
-          our mission is to make complex systems approachable — transforming automation and AI workflows
-          into something truly human-centric.
-        </p>
+          <div className={styles.divider}></div>
 
-        <p>
-          At the heart of Epiphany AI lies a belief: <em>ideas deserve to grow</em>.  
-          Whether you're exploring, experimenting, or scaling a vision,
-          we aim to provide the intelligence and infrastructure to get you there.
-        </p>
+          <h1 className={styles.title}>Our Vision</h1>
+          <p className={styles.text}>
+            To redefine how humans interact with knowledge, automation, and AI.
+            Empowering everyone to co-create with intelligent systems,
+            not just consume them.
+          </p>
 
-        <div className=""></div>
-
-        <h2>Our Vision</h2>
-        <p>
-          To redefine how humans interact with knowledge, automation, and AI —
-          empowering everyone to co-create with intelligent systems,
-          not just consume them.
-        </p>
-
-        <div></div>
-
-        <h2>Our Ecosystem</h2>
-        <ul>
-          <li>🌱 <strong>Lucid Garden</strong> — Personalized AI-powered learning journeys</li>
-          <li>⚙️ <strong>Epiphany Builder</strong> — Automated app creation and deployment pipeline</li>
-          <li>📈 <strong>Sentient Stocks</strong> — ML-driven stock insight platform</li>
-          <li>⚽ <strong>GoalMind</strong> — Predictive AI analytics for football outcomes</li>
-        </ul>
-
-        <p>
-          © {new Date().getFullYear()} Epiphany AI — Building the future of intelligent systems.
-        </p>
+        </div>
       </div>
     </div>
   );

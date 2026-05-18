@@ -6,8 +6,7 @@ export const header = style({
   left: 0,
   right: 0,
   height: '4rem',
-  
-    background: '#020617',
+  background: '#020617',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -99,17 +98,16 @@ export const mobileNavOpen = style({
   flexDirection: 'column',
   gap: '1rem',
   padding: '1rem',
-  background: '#0f172a',
+  height: '50vh',
+  background: '#020617',
   borderTop: '1px solid rgba(255,255,255,0.08)',
 })
 
 export const themeButton = style({
   padding: '0.5rem',
   borderRadius: '9999px',
-
   border: 'none',
   cursor: 'pointer',
-
   transition: '0.2s ease',
 
   selectors: {

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import * as styles from '../Contact.css'
 
 const Contact = () => {
     
@@ -12,49 +13,53 @@ const Contact = () => {
   };
 
   return (
-     <div>
+     <div className={styles.page}>
     <main>
-      <h1>Contact</h1>
+      <h1 className={styles.title}>Contact</h1>
 </main>
-      <div>
+      <div className={styles.card}>
         {/* Contact Section */}
         <div>
        <section>
-          <h2>Drop us a line!</h2>
+          <h2 className={styles.title}>Drop us a line!</h2>
 
-            <div>
-              <label>Name</label>
+            <div className={styles.field}>
+              <label className={styles.label}>Name</label>
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                className={styles.input}
                 />
               </div>
             <div>
-              <label>Email</label>
+              <label className={styles.label}>Email</label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className={styles.input}
               />
             </div>
           
           <div>
-          <label>Message</label>
+          <label className={styles.label}>Message</label>
           <textarea
           rows={8}
           value={message}
           placeholder='Type your message here...'
           onChange={(e) => setMessage(e.target.value)}
+          className={styles.textarea}
           />
           </div>
         </section>
         </div>
 
         {/* Save Button */}
-        <div>
+        <div className={styles.buttonWrap}>
           <button
             onClick={handleSave}
+            className={styles.button}
           >
             Send Message
           </button>
