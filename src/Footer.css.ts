@@ -2,41 +2,57 @@ import { style } from '@vanilla-extract/css'
 
 export const footer = style({
   width: '100%',
-  background: '#000',
-  color: '#cbd5e1',
   borderTop: '1px solid rgba(255,255,255,0.08)',
- 
 })
 
 export const divider = style({
-  height: '5px',
   width: '100%',
   borderRadius: '9999px',
   background: 'linear-gradient(to right, #2dd4bf, #38bdf8, #14b8a6)',
   opacity: 0.7,
 })
 
-export const grid = style({
-  display: 'grid',
-  gridTemplateColumns: '1fr',
+export const content = style({
+  display: 'flex',
+  flexWrap: 'wrap',
+})
+
+export const flex = style({
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '1rem',
   textAlign: 'center',
-  padding: '1.5rem',
+  alignItems: 'center',
+  margin: '0 auto',
+  
 
   '@media': {
     '(min-width: 768px)': {
-      gridTemplateColumns: 'repeat(2, 1fr)',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      alignItems: 'flex-start',
       textAlign: 'left',
     },
   },
 })
 
+export const section = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '0.75rem',
+  flex: 1,
+  minWidth: 0, 
+})
+
 export const brandTitle = style({
+  margin: 0,
   fontSize: '1rem',
   fontWeight: 700,
   color: '#2dd4bf',
 })
 
 export const paragraph = style({
+  margin: '0 auto',
   fontSize: '0.8rem',
   color: '#cbd5e1',
 })
@@ -45,7 +61,6 @@ export const socialRow = style({
   display: 'flex',
   justifyContent: 'center',
   gap: '0.75rem',
-
   '@media': {
     '(min-width: 768px)': {
       justifyContent: 'start',
@@ -56,8 +71,8 @@ export const socialRow = style({
 export const socialIcon = style({
   width: '1.25rem',
   height: '1.25rem',
-  fill: 'currentColor',
-  color: '#cbd5e1',
+  fill: '#2dd4bf',
+  color: '#2dd4bf',
   transition: 'color 0.2s ease',
 
   selectors: {
@@ -70,7 +85,7 @@ export const socialIcon = style({
 export const sectionTitle = style({
   fontSize: '1rem',
   fontWeight: 600,
-  marginBottom: '0.75rem',
+  margin: '0 auto',
   color: '#2dd4bf',
 })
 
@@ -98,9 +113,8 @@ export const link = style({
 
 export const bottom = style({
   borderTop: '1px solid rgba(255,255,255,0.1)',
-
   textAlign: 'center',
   color: '#94a3b8',
   fontSize: '0.75rem',
-  
+  padding: '0.5rem',
 })

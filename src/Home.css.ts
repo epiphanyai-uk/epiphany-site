@@ -3,16 +3,14 @@ import { style } from '@vanilla-extract/css';
 export const page = style({
   display: 'flex',
   flexDirection: 'column',
+  justifyContent: 'center',
   alignItems: 'center',
   padding: '2rem 1rem',
- background: '#0f172a',
+  background: '#0f172a',
 })
 
 export const container = style({
-  width: '100%',
-  maxWidth: '1100px',
-  display: 'grid',
-  gap: '3rem',
+  minHeight: 'calc(100dvh - 64px - 180px)',
 })
 
 export const hero = style({
