@@ -14,14 +14,12 @@ const Contact = () => {
 
   return (
      <div className={styles.page}>
-    <main>
-      <h1 className={styles.title}>Contact</h1>
-</main>
+
       <div className={styles.card}>
         {/* Contact Section */}
         <div>
        <section>
-          <h2 className={styles.title}>Drop us a line!</h2>
+          <h1 className={styles.title}>Drop us a line!</h1>
 
             <div className={styles.field}>
               <label className={styles.label}>Name</label>
