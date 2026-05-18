@@ -1,0 +1,120 @@
+import { style } from '@vanilla-extract/css'
+
+export const footer = style({
+  width: '100%',
+  borderTop: '1px solid rgba(255,255,255,0.08)',
+})
+
+export const divider = style({
+  width: '100%',
+  borderRadius: '9999px',
+  background: 'linear-gradient(to right, #2dd4bf, #38bdf8, #14b8a6)',
+  opacity: 0.7,
+})
+
+export const content = style({
+  display: 'flex',
+  flexWrap: 'wrap',
+})
+
+export const flex = style({
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '1rem',
+  textAlign: 'center',
+  alignItems: 'center',
+  margin: '0 auto',
+  
+
+  '@media': {
+    '(min-width: 768px)': {
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      alignItems: 'flex-start',
+      textAlign: 'left',
+    },
+  },
+})
+
+export const section = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '0.75rem',
+  flex: 1,
+  minWidth: 0, 
+})
+
+export const brandTitle = style({
+  margin: 0,
+  fontSize: '1rem',
+  fontWeight: 700,
+  color: '#2dd4bf',
+})
+
+export const paragraph = style({
+  margin: '0 auto',
+  fontSize: '0.8rem',
+  color: '#cbd5e1',
+})
+
+export const socialRow = style({
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '0.75rem',
+  '@media': {
+    '(min-width: 768px)': {
+      justifyContent: 'start',
+    },
+  },
+})
+
+export const socialIcon = style({
+  width: '1.25rem',
+  height: '1.25rem',
+  fill: '#2dd4bf',
+  color: '#2dd4bf',
+  transition: 'color 0.2s ease',
+
+  selectors: {
+    '&:hover': {
+      color: '#2dd4bf',
+    },
+  },
+})
+
+export const sectionTitle = style({
+  fontSize: '1rem',
+  fontWeight: 600,
+  margin: '0 auto',
+  color: '#2dd4bf',
+})
+
+export const list = style({
+  display: 'flex',
+  fontSize: '0.8rem',
+  flexDirection: 'column',
+  gap: '0.5rem',
+  listStyle: 'none',
+  padding: 0,
+  margin: 0,
+})
+
+export const link = style({
+  color: '#cbd5e1',
+  textDecoration: 'none',
+  transition: 'color 0.2s ease',
+
+  selectors: {
+    '&:hover': {
+      color: '#67e8f9',
+    },
+  },
+})
+
+export const bottom = style({
+  borderTop: '1px solid rgba(255,255,255,0.1)',
+  textAlign: 'center',
+  color: '#94a3b8',
+  fontSize: '0.75rem',
+  padding: '0.5rem',
+})

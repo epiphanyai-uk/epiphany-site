@@ -1,7 +1,14 @@
-import { style } from '@vanilla-extract/css';
+import {
+  globalStyle,
+} from '@vanilla-extract/css'
 
-export const container = style({
-  padding: '2rem',
-  background: '#111',
-  color: 'white',
+/* GLOBAL RESETS */
+globalStyle('html, body', {
+  margin: 0,
+  padding: 0,
+  background: '#0f172a'
+});
+
+globalStyle('*', {
+  boxSizing: 'border-box',
 });
