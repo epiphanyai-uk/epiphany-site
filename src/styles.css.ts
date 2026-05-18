@@ -3,18 +3,12 @@ import {
 } from '@vanilla-extract/css'
 
 /* GLOBAL RESETS */
-globalStyle('html, body, #root, #__next', {
+globalStyle('html, body', {
   margin: 0,
   padding: 0,
-  minHeight: '100vh',
+  background: '#0f172a'
 });
 
-globalStyle('body', {
-  display: 'flex',
-  flexDirection: 'column',
-  background: '#0f172a',
-});
-
-globalStyle('main', {
-  flexGrow: 1,
+globalStyle('*', {
+  boxSizing: 'border-box',
 });
