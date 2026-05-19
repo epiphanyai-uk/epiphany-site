@@ -16,25 +16,16 @@ const About = () => {
           <img className={styles.img} src={epiphanyImg} width={100} height={100} alt="Epiphany Logo" />
 
           <p className={styles.text}>
-            Epiphany AI is a next-generation AI workspace that brings together creative ideation,
-            technical automation, and data intelligence all in one place.
-            We’re building tools that empower developers, learners, and innovators
-            to turn ideas into fully realised systems with clarity, speed, and adaptability.
-          </p>
-
-          <p className={styles.text}>
-            At the heart of Epiphany AI lies a belief: <em>ideas deserve to grow</em>.
-            Whether you're exploring, experimenting, or scaling a vision,
-            we aim to provide the intelligence and infrastructure to get you there.
+            Epiphany is a UK based, AI startup with an agentic software creation platform designed to transform ideas into fully deployed applications without the need for extensive technical expertise.
+            By removing the complexity traditionally associated with software development, Epiphany enables you to bring your ideas to life faster, with fewer barriers to entry and at a fraction of the cost.
           </p>
 
           <div className={styles.divider}></div>
 
-          <h1 className={styles.title}>Our Vision</h1>
           <p className={styles.text}>
-            To redefine how humans interact with knowledge, automation, and AI.
-            Empowering everyone to co-create with intelligent systems,
-            not just consume them.
+            Our mission is to make the benefits of state of the art AI technology available to everyone, so we can all flourish in a rapidly automating ecosystem.
+            Through a combination of cutting-edge technology and a human-centered approach, we can help turn your ideas into tangible results.
+            At our core, we are a team of innovators, problem-solvers, and technology specialists committed to shaping the future through responsible and impactful AI.
           </p>
 
         </div>
