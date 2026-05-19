@@ -2,10 +2,10 @@
 
 🎨 Tech Stack
 
-`React + Vite + Typescript`
-`Express`
-`Resend Email API`
-`pnpm`
+- React + Vite + Typescript
+- Express
+- Resend Email API
+- pnpm
 
 🚀 Getting Started
 
