@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import { Resend } from 'resend'
+import rateLimit from 'express-rate-limit'
 
 dotenv.config()
 
@@ -9,9 +10,19 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+const contactLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 5, // limit each IP to 5 requests per window
+  message: {
+    error: 'Too many messages sent. Please try again later.',
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+})
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-app.post('/api/contact', async (req, res) => {
+app.post('/api/contact', contactLimiter, async (req, res) => {
   try {
     const { name, email, message } = req.body
 
@@ -33,6 +44,8 @@ app.post('/api/contact', async (req, res) => {
   }
 })
 
-app.listen(3001, () => {
-  console.log('Server running on http://localhost:3001')
+const PORT = process.env.PORT || 3001
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
 })
