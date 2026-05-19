@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from 'react'
-import * as styles from '../Card.css'
+import * as styles from '../styles/Card.css'
 
 type CardProps =
   HTMLAttributes<HTMLDivElement>

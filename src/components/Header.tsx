@@ -1,6 +1,6 @@
 import { useEffect, type Dispatch, type SetStateAction } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import * as styles from '../Header.css'
+import * as styles from '../styles/Header.css'
 import epiphanyImg from '../assets/epiphanyai-logo.png';
 
 export interface HeaderProps {

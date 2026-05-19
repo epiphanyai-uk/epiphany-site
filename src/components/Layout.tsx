@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useState } from 'react'
-import * as styles from '../Layout.css'
+import * as styles from '../styles/Layout.css'
 
 const Layout = () => {
   const [

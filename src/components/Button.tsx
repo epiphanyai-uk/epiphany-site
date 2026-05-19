@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import * as styles from '../Button.css'
+import * as styles from '../styles/Button.css'
 
 type ButtonProps = {
   to: string

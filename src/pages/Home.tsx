@@ -1,6 +1,6 @@
 import { Button } from '../components/Button'
 import epiphanyImg from '../assets/epiphanyai-logo.png';
-import * as styles from "../Home.css"
+import * as styles from "../styles/Home.css"
 
 const Home = () => {
 
