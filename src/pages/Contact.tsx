@@ -7,10 +7,33 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSave = () => {
-    console.log('Sent message', { name, email });
-    alert('Sent message!');
-  };
+const handleSave = async () => {
+  try {
+    const res = await fetch('http://localhost:3001/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    })
+
+    if (!res.ok) {
+      throw new Error('Failed to send message')
+    }
+
+    const data = await res.json()
+
+    console.log('Sent message:', data)
+    alert('Sent message!')
+  } catch (error) {
+    console.error(error)
+    alert('Something went wrong')
+  }
+}
 
   return (
      <div className={styles.page}>
