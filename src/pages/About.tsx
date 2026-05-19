@@ -1,4 +1,4 @@
-import * as styles from "../About.css"
+import * as styles from "../styles/About.css"
 import epiphanyImg from '../assets/epiphanyai-logo.png';
 
 const About = () => {

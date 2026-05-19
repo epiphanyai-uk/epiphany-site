@@ -1,5 +1,5 @@
 import type { InputHTMLAttributes } from 'react'
-import * as styles from '../Input.css'
+import * as styles from '../styles/Input.css'
 
 type InputProps =
   InputHTMLAttributes<HTMLInputElement>
