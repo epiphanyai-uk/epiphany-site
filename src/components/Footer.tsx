@@ -41,7 +41,7 @@ const Footer = () => {
                                     role="presentation"
                                     aria-hidden="true"
                                 >
-                                    <use href="/icons.svg#discord-icon"></use>
+                                    <use href="/icons.svg#linkedin-icon"></use>
                                 </svg>
                             </a>
                         </div>
@@ -76,7 +76,7 @@ const Footer = () => {
 
                 {/* DIVIDER */}
                 <div className={styles.divider} />
-                
+
                 <p>© {new Date().getFullYear()} Epiphany AI Ltd.</p>
             </div>
         </footer>

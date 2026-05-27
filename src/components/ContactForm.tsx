@@ -50,7 +50,7 @@ const ContactForm = ({ onSuccess }: Props) => {
               className={styles.input}
             />
           </div>
-          <div>
+          <div className={styles.field}>
             <label className={styles.label}>Email</label>
             <input
               type="email"
@@ -60,7 +60,7 @@ const ContactForm = ({ onSuccess }: Props) => {
             />
           </div>
 
-          <div>
+          <div className={styles.field}>
             <label className={styles.label}>Message</label>
             <textarea
               rows={8}

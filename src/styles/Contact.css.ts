@@ -33,14 +33,16 @@ export const card = style({
 export const field = style({
   display: 'flex',
   flexDirection: 'column',
+  width: '100%',
+  textAlign: 'left',
 })
 
 /* LABEL */
 export const label = style({
-  fontSize: '0.875rem',
+  fontSize: '1rem',
   opacity: 0.8,
   color: '#2dd4bf',
-  gap: '2rem',
+  margin: '0.5rem',
 })
 
 /* INPUT */
@@ -48,16 +50,14 @@ export const input = style({
   width: '100%',
   padding: '0.75rem 1rem',
   borderRadius: '0.75rem',
-  border: '1px solid #334155',
   background: '#0f172a',
+  border: '1px solid rgba(34, 211, 238, 0.12)',
   color: '#e2e8f0',
-  outline: 'none',
-  margin: '0.25rem auto',
 
   selectors: {
     '&:focus': {
-      borderColor: '#14b8a6',
-      boxShadow: '0 0 0 2px rgba(20,184,166,0.3)',
+      outline: 'none',
+      borderColor: 'rgba(34, 211, 238, 0.4)',
     },
   },
 })
@@ -82,14 +82,11 @@ export const buttonWrap = style({
 export const button = style({
   padding: '0.75rem 1.5rem',
   borderRadius: '0.75rem',
-
   background: '#14b8a6',
   color: '#000',
-
   fontWeight: 600,
   border: 'none',
   cursor: 'pointer',
-
   transition: 'background 0.2s ease',
 
   selectors: {
