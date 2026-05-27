@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import * as styles from '../styles/Contact.css'
 
-const ContactForm = ({onSuccess}) => {
+type Props = {
+  onSuccess: () => void
+}
+
+const ContactForm = ({onSuccess}: Props) => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

@@ -1,13 +1,14 @@
 # Epiphany AI website with resend email API 📮
 
-🎨 Tech Stack
+## 🎨 Tech Stack
 
-- React + Vite + Typescript
-- Express
-- Resend Email API
-- pnpm
+- React + Vite
+- TypeScript
+- Vercel Serverless Functions
+- Resend API
+- Upstash Redis
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 Install pnpm
 
@@ -17,9 +18,9 @@ Install dependencies
 
 `pnpm install`
 
-🌐 Frontend
+## 🌐 Frontend
 
-Run Vite dev server:
+Run Frontend Vite dev server for UI updates:
 
 `pnpm dev`
 
@@ -27,18 +28,24 @@ Frontend runs at:
 
 <http://localhost:5173>
 
-🤖 Backend (Email Server)
+## 🤖 Backend
 
-Run Express server:
+A serverless function handles contact form submissions.
 
-`npx tsx api/server.ts`
+- File: `api/contact.ts`
+- Route: `/api/contact`
 
-Backend runs at:
+This function runs on Vercel’s serverless runtime and handles:
+- sending emails via Resend
+- rate limiting via Upstash
 
-<http://localhost:3001>
+Run full stack server with:
+
+`pnpm dev:full`
 
 Create an .env file in the project root:
 
 ```
 RESEND_API_KEY=your_key_here
-PORT=3001```
+UPSTASH_REDIS_REST_URL=upstash_redis_rest_url
+UPSTASH_REDIS_REST_TOKEN=upstash_redis_rest_token
