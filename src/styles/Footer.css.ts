@@ -68,18 +68,22 @@ export const socialRow = style({
   },
 })
 
-export const socialIcon = style({
-  width: '1.25rem',
-  height: '1.25rem',
-  fill: '#2dd4bf',
-  color: '#2dd4bf',
+export const socialLink = style({
+  display: 'inline-flex',
   transition: 'color 0.2s ease',
+  color: '#cbd5e1',
 
   selectors: {
     '&:hover': {
       color: '#2dd4bf',
     },
   },
+})
+
+export const socialIcon = style({
+  width: '1.25rem',
+  height: '1.25rem',
+  fill: 'currentColor',
 })
 
 export const sectionTitle = style({
