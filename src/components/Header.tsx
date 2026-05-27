@@ -112,14 +112,14 @@ useEffect(() => {
         {/* MOBILE NAV */}
         {isLeftSideBarOpen && (
           <nav className={styles.mobileNavOpen}>
-            <Link to="/">
+            <Link to="/" className={styles.logoWrapper}>
               <img src={epiphanyImg} width={50} height={50} alt="Epiphany Logo" />
             </Link>
-            <Link className={styles.link} to="/about">
+            <Link className={styles.navLinks} to="/about">
               About
             </Link>
 
-            <Link className={styles.link} to="/contact">
+            <Link className={styles.navLinks} to="/contact">
               Contact
             </Link>
           </nav>
@@ -130,11 +130,11 @@ useEffect(() => {
           <Link to="/">
             <img src={epiphanyImg} width={50} height={50} alt="Epiphany Logo" />
           </Link>
-          <Link className={styles.link} to="/about">
+          <Link className={styles.navLinks} to="/about">
             About
           </Link>
 
-          <Link className={styles.link} to="/contact">
+          <Link className={styles.navLinks} to="/contact">
             Contact
           </Link>
         </nav>

@@ -30,13 +30,13 @@ export const left = style({
 export const menuButton = style({
   padding: '0.5rem',
   borderRadius: '0.375rem',
-
   border: 'none',
   cursor: 'pointer',
-
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  backgroundColor: '#14b8a6',
+  color: '#020617',
 
   '@media': {
     '(min-width: 768px)': {
@@ -47,17 +47,11 @@ export const menuButton = style({
 
 export const logoWrapper = style({
   display: 'flex',
-  alignItems: 'center',
-})
+  justifyContent: 'center',
 
-export const link = style({
-  textDecoration: 'none',
-  color: '#cbd5e1',
-  cursor: 'pointer',
-
-  selectors: {
-    '&:hover': {
-      color: '#2dd4bf',
+  '@media': {
+    '(min-width: 768px)': {
+      justifyContent: 'flex-start',
     },
   },
 })
@@ -67,12 +61,32 @@ export const navLinks = style({
   flexDirection: 'column',
   gap: '1rem',
   textDecoration: 'none',
+  color: '#cbd5e1',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer',
+  textAlign: 'center',
+  padding: '0.75rem 1rem',
+  fontSize: '1rem',
 
   '@media': {
     '(min-width: 768px)': {
       flexDirection: 'row',
       alignItems: 'center',
       gap: '1rem',
+    },
+  },
+
+  selectors: {
+    '&:hover': {
+      color: '#2dd4ee',
+    },
+    '&:active': {
+      color: '#2dd4ee',
+      transform: 'scale(0.98)',
+    },
+    '&:focus-visible': {
+      outline: '2px solid #2dd4ee',
+      outlineOffset: '4px',
     },
   },
 })
@@ -96,11 +110,15 @@ export const mobileNavOpen = style({
   right: 0,
   display: 'flex',
   flexDirection: 'column',
-  gap: '1rem',
-  padding: '1rem',
-  height: '50vh',
-  background: '#020617',
-  borderTop: '1px solid rgba(255,255,255,0.08)',
+  alignItems: 'stretch',
+  gap: '0.5rem',
+  padding: '1.5rem 1rem',
+  background: 'rgba(2, 6, 23, 0.95)',
+  backdropFilter: 'blur(12px)',
+  borderTop: '3px solid rgba(34, 211, 238, 0.2)',
+  borderBottom: '3px solid rgba(34, 211, 238, 0.08)',
+  boxShadow: '0 20px 40px rgba(0,0,0,0.35)',
+  zIndex: 1000,
 })
 
 export const themeButton = style({

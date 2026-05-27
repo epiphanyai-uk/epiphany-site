@@ -36,8 +36,9 @@ export const buttonVariants = styleVariants({
   primary: [
     baseButton,
     {
-      background: '#06b6d4',
+      background: '#2dd4bf',
       color: '#000',
+      fontSize: '1rem',
 
       selectors: {
         '&:hover': {
