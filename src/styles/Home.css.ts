@@ -5,7 +5,7 @@ export const page = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '2rem 1rem',
+  padding: '1rem',
   background: '#0f172a',
 })
 
@@ -18,11 +18,12 @@ export const hero = style({
   placeItems: 'center',
   textAlign: 'center',
   gap: '1.5rem',
-  marginBlockStart: '6rem',
+  marginBlockStart: '12rem',
 })
 
 export const paragraph = style({
   color: '#d1d5db',
+  fontSize: '1.25rem',
 })
 
 export const buttonContainer = style({

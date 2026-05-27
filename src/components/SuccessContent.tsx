@@ -7,7 +7,8 @@ type Props = {
 
 export const SuccessContent = ({ onReset }: Props) => {
   return (
-    <div className={styles.card}>
+
+    <div className={styles.successContent}>
       <h1 className={styles.title}>Your message has been sent</h1>
       <button className={styles.button} onClick={onReset}>
         Send another message

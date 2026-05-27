@@ -2,14 +2,13 @@ import { style } from '@vanilla-extract/css'
 
 export const footer = style({
   width: '100%',
-  borderTop: '1px solid rgba(255,255,255,0.08)',
 })
 
 export const divider = style({
+  height: '4px',
   width: '100%',
-  borderRadius: '9999px',
-  background: 'linear-gradient(to right, #2dd4bf, #38bdf8, #14b8a6)',
-  opacity: 0.7,
+  background: 'linear-gradient(to right, transparent, rgba(45,212,191,0.3), transparent)',
+  margin: '1.5rem 0',
 })
 
 export const content = style({
@@ -46,14 +45,14 @@ export const section = style({
 
 export const brandTitle = style({
   margin: 0,
-  fontSize: '1rem',
+  fontSize: '1.1rem',
   fontWeight: 700,
   color: '#2dd4bf',
 })
 
 export const paragraph = style({
   margin: '0 auto',
-  fontSize: '0.8rem',
+  fontSize: '1rem',
   color: '#cbd5e1',
 })
 
@@ -87,7 +86,7 @@ export const socialIcon = style({
 })
 
 export const sectionTitle = style({
-  fontSize: '1rem',
+  fontSize: '1.1rem',
   fontWeight: 600,
   margin: '0 auto',
   color: '#2dd4bf',
@@ -95,7 +94,7 @@ export const sectionTitle = style({
 
 export const list = style({
   display: 'flex',
-  fontSize: '0.8rem',
+  fontSize: '1rem',
   flexDirection: 'column',
   gap: '0.5rem',
   listStyle: 'none',
@@ -116,9 +115,8 @@ export const link = style({
 })
 
 export const bottom = style({
-  borderTop: '1px solid rgba(255,255,255,0.1)',
   textAlign: 'center',
   color: '#94a3b8',
-  fontSize: '0.75rem',
+  fontSize: '0.9rem',
   padding: '0.5rem',
 })

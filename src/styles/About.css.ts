@@ -7,7 +7,6 @@ export const page = style({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: '100vh',
     width: '100%',
     fontFamily: 'inter',
 })
@@ -21,15 +20,33 @@ export const card = style({
     position: 'relative',
     zIndex: 10,
     maxWidth: '48rem',
-    margin: '5rem 1rem',
     padding: '2.5rem',
     borderRadius: '1rem',
     textAlign: 'center',
-    background: '#111c3d',
     display: 'flex',
     flexDirection: 'column',
     gap: '1.5rem',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
+    background: '#020617',
+    border: '1px solid rgba(34, 211, 238, 0.10)',
+    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.35)',
+    transition: 'transform 0.2s ease, border-color 0.2s ease',
+    marginBlockStart: '8rem',
+    marginBlockEnd: '3rem',
+    marginInline: '1rem',
+
+    '@media': {
+        '(min-width: 768px)': {
+            marginInline: 'auto',
+            maxWidth: '600px',
+        },
+    },
+
+    selectors: {
+        '&:hover': {
+            transform: 'translateY(-4px)',
+            borderColor: 'rgba(34, 211, 238, 0.35)',
+        },
+    }
 })
 
 /* TYPOGRAPHY */

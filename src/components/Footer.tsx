@@ -73,6 +73,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className={styles.bottom}>
+
+                {/* DIVIDER */}
+                <div className={styles.divider} />
+                
                 <p>© {new Date().getFullYear()} Epiphany AI Ltd.</p>
             </div>
         </footer>

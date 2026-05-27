@@ -2,12 +2,11 @@ import { style } from '@vanilla-extract/css'
 
 /* PAGE WRAPPER */
 export const page = style({
-  minHeight: '100vh',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  padding: '2rem 1rem',
+  padding: '1rem',
 })
 
 /* PAGE TITLE */
@@ -24,11 +23,10 @@ export const card = style({
   width: '100%',
   maxWidth: '36rem',
   borderRadius: '1rem',
-  padding: '1.5rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '1rem',
-  margin: '3rem auto',
+  margin: '10rem auto',
 })
 
 /* FIELD WRAPPER */
@@ -103,4 +101,14 @@ export const button = style({
       transform: 'scale(0.98)',
     },
   },
+})
+
+export const successContent = style({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  textAlign: 'center',
+  gap: '1rem',
+  minHeight: '60vh',
 })
