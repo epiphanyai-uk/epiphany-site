@@ -43,6 +43,10 @@ Run full stack server with:
 
 `pnpm dev:full`
 
+Full Stack App runs at:
+
+<http://localhost:3000>
+
 Create an .env file in the project root:
 
 ```
