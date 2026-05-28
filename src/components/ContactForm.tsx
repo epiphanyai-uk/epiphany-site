@@ -42,18 +42,24 @@ const ContactForm = ({ onSuccess }: Props) => {
           <h1 className={styles.title}>Drop us a line!</h1>
 
           <div className={styles.field}>
-            <label className={styles.label}>Name</label>
+            <label htmlFor="name" className={styles.label}>Name</label>
             <input
-              type="text"
+              type={name}
+              autoComplete="name"
+              id="name"
+              name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className={styles.input}
             />
           </div>
           <div className={styles.field}>
-            <label className={styles.label}>Email</label>
+            <label htmlFor="email" className={styles.label}>Email</label>
             <input
-              type="email"
+              type={email}
+              autoComplete="email"
+              id="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={styles.input}
@@ -61,9 +67,11 @@ const ContactForm = ({ onSuccess }: Props) => {
           </div>
 
           <div className={styles.field}>
-            <label className={styles.label}>Message</label>
+            <label htmlFor="message" className={styles.label}>Message</label>
             <textarea
               rows={8}
+              id="message"
+              name="message"
               value={message}
               placeholder='Type your message here...'
               onChange={(e) => setMessage(e.target.value)}
