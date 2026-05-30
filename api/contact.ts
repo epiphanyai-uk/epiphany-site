@@ -2,6 +2,8 @@ import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
 import { Resend } from 'resend'
 
+/// <reference types="node" />
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 if (!process.env.RESEND_API_KEY) {
