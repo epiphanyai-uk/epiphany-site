@@ -11,8 +11,13 @@ const ContactForm = ({ onSuccess }: Props) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (
+    e: React.SubmitEvent
+  ) => {
+    e.preventDefault()
+
     setIsLoading(true)
 
     try {
@@ -27,6 +32,7 @@ const ContactForm = ({ onSuccess }: Props) => {
       onSuccess()
     } catch (err) {
       console.error(err)
+      setError('Please fill in this field')
     } finally {
       setIsLoading(false)
     }
@@ -34,66 +40,80 @@ const ContactForm = ({ onSuccess }: Props) => {
 
   return (
 
+    <form onSubmit={handleSubmit}>
+      <h1 className={styles.title}>
+        Drop us a line!
+      </h1>
 
-    <div>
-      {/* Contact Section */}
-      <div>
-        <section>
-          <h1 className={styles.title}>Drop us a line!</h1>
+      <div className={styles.field}>
+        <label htmlFor="name" className={styles.label}>
+          Name
+        </label>
 
-          <div className={styles.field}>
-            <label htmlFor="name" className={styles.label}>Name</label>
-            <input
-              type={name}
-              autoComplete="name"
-              id="name"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className={styles.input}
-            />
-          </div>
-          <div className={styles.field}>
-            <label htmlFor="email" className={styles.label}>Email</label>
-            <input
-              type={email}
-              autoComplete="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className={styles.input}
-            />
-          </div>
-
-          <div className={styles.field}>
-            <label htmlFor="message" className={styles.label}>Message</label>
-            <textarea
-              rows={8}
-              id="message"
-              name="message"
-              value={message}
-              placeholder='Type your message here...'
-              onChange={(e) => setMessage(e.target.value)}
-              className={styles.textarea}
-            />
-          </div>
-        </section>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          minLength={2}
+          autoComplete="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className={styles.input}
+        />
       </div>
 
-      {/* Save Button */}
+      <div className={styles.field}>
+        <label htmlFor="email" className={styles.label}>
+          Email
+        </label>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          autoComplete="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={styles.input}
+        />
+      </div>
+
+      <div className={styles.field}>
+        <label htmlFor="message" className={styles.label}>
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          required
+          rows={8}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Type your message here..."
+          className={styles.textarea}
+        />
+      </div>
+
+      {error && (
+        <p>
+          {error}
+        </p>
+      )}
+
       <div className={styles.buttonWrap}>
         <button
+          type="submit"
           disabled={isLoading}
-          onClick={handleSubmit}
           className={styles.button}
         >
           {isLoading ? 'Sending...' : 'Send Message'}
         </button>
       </div>
-    </div>
+    </form>
+  )
+}
 
-  );
-};
-
-export default ContactForm;
+  export default ContactForm;
