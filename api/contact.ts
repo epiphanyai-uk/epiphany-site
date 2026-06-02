@@ -4,6 +4,12 @@ import { Resend } from 'resend'
 
 /// <reference types="node" />
 
+type ContactFormData = {
+  name: string
+  email: string
+  message: string
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 if (!process.env.RESEND_API_KEY) {
@@ -19,6 +25,15 @@ const ratelimit = new Ratelimit({
     '10 m'
   ),
 })
+
+const escapeHtml = (text: string) => {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+}
 
 export async function POST(req: Request) {
   const ip =
@@ -39,16 +54,47 @@ export async function POST(req: Request) {
   }
 
   try {
-    const body = await req.json()
+    const body = await req.json() as ContactFormData
+
+    if (
+      typeof body.name !== 'string' ||
+      typeof body.email !== 'string' ||
+      typeof body.message !== 'string'
+    ) {
+      return Response.json(
+        { error: 'Invalid input' },
+        { status: 400 }
+      )
+    }
+
+    if (
+      !body.name.trim() ||
+      !body.email.trim() ||
+      !body.message.trim()
+    ) {
+      return Response.json(
+        { error: 'All fields are required' },
+        { status: 400 }
+      )
+    }
+
+    const name = escapeHtml(body.name)
+    const email = escapeHtml(body.email)
+    const message = escapeHtml(body.message)
+
 
     const data =
       await resend.emails.send({
         from:
-          'onboarding@resend.dev',
+          'contact@epiphanyai.co.uk',
         to: 'milly.palmer@epiphanyai.co.uk',
-        subject: 'Contact Form',
+        replyTo: email,
+        subject: `Contact Form - ${name}`,
         html: `
-          <p>${body.message}</p>
+        <p><strong>Name:</strong>${name}</p>
+        <p><strong>Email:</strong>${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
         `,
       })
 
