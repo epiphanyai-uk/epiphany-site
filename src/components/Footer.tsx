@@ -24,16 +24,15 @@ const Footer = () => {
                         <div
                             className={styles.socialRow}
                         >
-                            <a href="https://github.com/epiphanyai-uk" className={styles.socialLink} target="_blank">
+                            <a href="https://www.instagram.com/epiphanyartificialintelligence" className={styles.socialLink} target="_blank">
                                 <svg
                                     className={styles.socialIcon}
                                     role="presentation"
                                     aria-hidden="true"
                                 >
-                                    <use href="/icons.svg#github-icon"></use>
+                                    <use href="/icons.svg#instagram-icon"></use>
                                 </svg>
                             </a>
-
 
                             <a href="https://www.linkedin.com/company/epiphanyartificialintelligence/" className={styles.socialLink} target="_blank">
                                 <svg
