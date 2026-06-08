@@ -34,6 +34,8 @@ const Footer = () => {
                                 </svg>
                             </a>
 
+                            {/* Debug instagram icon missing on desktop until hard refresh */}
+
                             <a href="https://www.linkedin.com/company/epiphanyartificialintelligence/" className={styles.socialLink} target="_blank">
                                 <svg
                                     className={styles.socialIcon}
